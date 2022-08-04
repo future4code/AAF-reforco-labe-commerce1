@@ -27,13 +27,26 @@ const ImgButton = styled.img`
   }
 `
 
+const StyleInput = styled.input`
+  margin: 4px;
+`
+
 export function Filtros() {
   return (
     <ContainerFilter>
       <div>
-        <input type="number" placeholder="Valor minimo" />
-        <input type="number" placeholder="Valor maximo" />
+        <h3>Filtros</h3>
+        <StyleInput type="number" placeholder="Valor minimo" />
+        <StyleInput type="number" placeholder="Valor maximo" />
+      </div>
+      <div>
         <input type="text" placeholder="pesquisar" />
+      </div>
+      <div>
+        <select>
+          <option>Crescente</option>
+          <option>decrescente</option>
+        </select>
       </div>
       <CartButton>
         <ImgButton src="https://cdn-icons-png.flaticon.com/512/25/25619.png" />
