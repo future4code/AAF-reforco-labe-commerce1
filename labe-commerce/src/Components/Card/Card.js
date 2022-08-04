@@ -1,5 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
+import Fab from '@mui/material/Fab';
+import AddIcon from '@mui/icons-material/Add';
+import Box from '@mui/material/Box';
 
 const ContainerCard = styled.div`
   width: 300px;
@@ -38,7 +41,13 @@ export default function Card(props) {
           <p>{props.nomeProduto}</p>
           <p>R$ {props.valorProduto}</p>
         </ContainerInfos>
-        <button>Adicionar no carrinho</button>
+
+        <Box sx={{ '& > :not(style)': { m: 1 } }}>   
+        <Fab size="medium" color="" aria-label="add">
+       <AddIcon />
+      </Fab>
+    </Box>
+
       </ContainerCard>
     </div>
   )
