@@ -10,6 +10,7 @@ const ContainerProdutos = styled.div`
 `
 
 export function Home() {
+
   const [produtos, setProdutos] = useState([
     {
       imgProduto:
@@ -43,10 +44,12 @@ export function Home() {
   })
 
   return (
+
     <div>
       <Header />
       <Filtros />
       <ContainerProdutos>{Cards}</ContainerProdutos>
     </div>
+
   )
 }
