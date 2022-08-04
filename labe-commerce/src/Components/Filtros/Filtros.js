@@ -1,21 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
-
-const ContainerFilter = styled.div`
-  margin: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-around;
-`
-
-
-
-const StyleInput = styled.input`
-  margin: 4px;
-`
-
+import {StyleInput,ContainerFilter}from "./styled"
 export function Filtros() {
   return (
     <ContainerFilter>
