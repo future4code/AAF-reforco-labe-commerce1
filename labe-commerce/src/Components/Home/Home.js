@@ -11,6 +11,10 @@ const ContainerProdutos = styled.div`
 
 export function Home() {
 
+  const [query, setQuery] = useState('')
+  const [orderParam, setOrderParam] = useState('')
+  const [valMax, setValMax] = useState('')
+  const [valMin, setValMin] = useState('')
   const [produtos, setProdutos] = useState([
     {
       imgProduto:
@@ -32,7 +36,16 @@ export function Home() {
     }
   ])
 
-  const Cards = produtos.map((produtos, index) => {
+  const Cards = produtos
+  .filter(produtos => query === ""  || produtos.nomeProduto.toLowerCase().includes(query) )
+  .filter((produtos)=> valMin === "" || produtos.valorProduto >= valMin)
+  .filter((produtos)=> valMax === "" || produtos.valorProduto <= valMax)
+  .sort((a,b) => orderParam ==="" || orderParam === "asc" && a.valorProduto > b.valorProduto ? 1 : -1 )
+  .sort((a,b) => orderParam ==="" || orderParam === "desc" && a.valorProduto > b.valorProduto ? -1 : 1 )
+
+  
+  .map((produtos, index) => {
+
     return (
       <Card
         key={index}
@@ -43,13 +56,33 @@ export function Home() {
     )
   })
 
-  return (
+  const handleQueryInput = (event)=>{
+    setQuery(event.target.value)
+  }
 
+  const handleOrderParam =(event)=>{
+    setOrderParam(event.target.value)
+  }
+
+
+  return (
+   
     <div>
       <Header />
-      <Filtros />
+      <Filtros
+         handleQueryInput={handleQueryInput}
+         handleOrderParam={handleOrderParam}
+         states={{query, orderParam,  }}
+         valMin={valMin}
+         setValMin={setValMin}
+         valMax={valMax}
+         setValMax={setValMax}
+         />
+
+
       <ContainerProdutos>{Cards}</ContainerProdutos>
     </div>
+
 
   )
 }
