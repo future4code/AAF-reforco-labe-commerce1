@@ -1,33 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
-
-const ContainerHeader = styled.div`
-  background-color: red;
-  height: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-`
-const CartButton = styled.div`
-  width: 48px;
-  display: flex;
-`
-
-const ImgButton = styled.img`
-  width: 48px;
- margin-left: 300px;
-  cursor: pointer;
-  :hover {
-    animation: ImgButton 0.3s linear both;
-    @keyframes ImgButton {
-      100% {
-        transform: scale(1.2);
-      }
-    }
-  }
-`
+import {ContainerHeader,CartButton,ImgButton} from "./styled"
 
 export default function Header() {
 

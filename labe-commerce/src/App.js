@@ -3,6 +3,9 @@ import './App.css'
 // import { Filtros } from './Components/Filtros/Filtros'
 // import { Home } from './Components/Home/Home'
 import { Router } from './routes/Router'
+import {Data} from'./Data/Data'
+import { Home } from './Components/Home/Home'
+
 
 function App() {
   return (
@@ -10,6 +13,7 @@ function App() {
       {/* <Filtros/> */}
       <Router/>
       {/* <Carrinho/> */}
+      {/* <Home data={Data}/> */}
     </div>
   )
 }

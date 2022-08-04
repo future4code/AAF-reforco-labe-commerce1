@@ -1,19 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import styled from "styled-components";
-
-const ContainerHeader = styled.div`
-  background-color: red;
-  height: 200px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  h1{
-    cursor: pointer;
-  }
-`
-
+import {ContainerHeader} from "./styled"
 
 export function Carrinho() {
 
