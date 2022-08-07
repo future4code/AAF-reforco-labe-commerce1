@@ -4,7 +4,7 @@ export const ContainerHeader = styled.div`
   background-color: #41414f;
   height: 200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #b0b0d6;
@@ -16,7 +16,7 @@ export const CartButton = styled.div`
 
 export const ImgButton = styled.img`
   width: 48px;
-  margin-left: 300px;
+  /* margin-left: 300px; */
   cursor: pointer;
   :hover {
     animation: ImgButton 0.3s linear both;
