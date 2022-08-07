@@ -4,11 +4,11 @@ export const ContainerHeader = styled.div`
   background-color: #41414f;
   height: 200px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   color: #b0b0d6;
-  h1 {
+  p {
     cursor: pointer;
   }
 `;

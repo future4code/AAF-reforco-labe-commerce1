@@ -12,7 +12,7 @@ export function Home({valores}) {
   const [valMax, setValMax] = useState('')
   const [valMin, setValMin] = useState('')
   const {carrinho,setCarrinho} = valores
-  const [valorTotal, setValorTotal] = useState(0);
+
   const [listaDeProdutos, setlistaDeProdutos] = useState([
     {
       id: 1,
