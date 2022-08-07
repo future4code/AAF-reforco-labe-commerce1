@@ -2,10 +2,10 @@
 LabeCommerce
 
 
-O que funciona
-O que não funciona
-https://two-army.surge.sh/
-Imagens
+-O que funciona
+-O que não funciona
+-https://decisive-thunder.surge.sh/
+-Imagens
 
 Nome dos integrantes:
 
