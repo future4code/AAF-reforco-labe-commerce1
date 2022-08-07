@@ -4,34 +4,34 @@ import { CarrinhoStyled } from "./styled";
 import { useNavigate } from "react-router-dom";
 import { ContainerHeader } from "./styled";
 
-// function Itens(props) {
-//   return (
-//     <ItensStyled>
-//       <p>{props.name}</p>
-//       <p>{props.price}</p>
-//       <p>Quntidade:{props.quantidade}</p>
-//     </ItensStyled>
-//   );
-// }
+
 function Carrinho ({carrinho}){
     const navigate = useNavigate();
     const goToIndex = () => {
       navigate("/");
     };
-    const itensDoCarinho = carrinho?.map(({name,price})=>{
+    const itensDoCarinho = carrinho?.map(({id,name,price, quantidade,valorTotal, onClick})=>{
  
-        return <Itens name={name} price={price} quntidade={1}/>;  
+        return <Itens
+        key={id}
+         name={name} 
+         price={price} 
+         quntidade={quantidade}
+        //  onClick={() =>removerItemDoCarrinho(item)}
+        />;  
 })
     console.log(carrinho)
 return (
   <div>
-    <ContainerHeader>   
-      <h1 onClick={goToIndex}>LabeCommerce</h1>
+    <ContainerHeader>
+      <h1>LabeCommerce </h1>
+      <p onClick={goToIndex}>voltar</p>
     </ContainerHeader>
 
     <CarrinhoStyled>
-     
-   {itensDoCarinho}
+<h2>Carrinho</h2>
+      {itensDoCarinho}
+      {/* <p>Valor Total: R$ {valorTotal}</p> */}
     </CarrinhoStyled>
   </div>
 );
